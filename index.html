@@ -18,55 +18,53 @@
     }
 
     /* ============================================================
-       DARK MODE (DEFAULT) — ALL VARIABLES DEFINED
+       DARK MODE (DEFAULT) — PLUM BURGUNDY & GOLD (NO GRADIENT)
        ============================================================ */
     :root {
-      --primary: #6c63ff;
-      --primary-hover: #5a52e0;
-      --secondary: #ff6584;
-      --dark: #0f0e17;
-      --dark2: #1a1a2e;
-      --light: #fffffe;
-      --gray: #a7a9be;
+      --primary: #C28E5C;          /* Elegant Gold */
+      --primary-hover: #A6784C;    /* Darker Gold */
+      --secondary: #E4C59B;        /* Soft Gold/Tan */
+      --dark: #3A2533;             /* Deep Plum/Burgundy (Background) */
+      --dark2: #4A3040;            /* Lighter Plum (Cards) */
+      --light: #FCFAFA;            /* Off-White/Pinkish (Main Text) */
+      --gray: #BFA9B5;             /* Muted Pinkish Gray (Soft Text) */
 
-      --gradient: linear-gradient(135deg, #6c63ff 0%, #ff6584 100%);
-
-      --card-bg: #1a1a2e;
-      --border-color: rgba(108, 99, 255, 0.2);
-      --text-main: #fffffe;
-      --text-soft: #a7a9be;
-      --shadow: 0 20px 40px rgba(108, 99, 255, 0.2);
-      --nav-bg: rgba(15, 14, 23, 0.85);
-      --input-bg: rgba(108, 99, 255, 0.05);
-      --input-bg-hover: rgba(108, 99, 255, 0.15);
-      --tech-badge-bg: rgba(255, 101, 132, 0.12);
-      --tech-badge-border: rgba(255, 101, 132, 0.3);
-      --skill-icon-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-      --overlay-bg: rgba(15, 14, 23, 0.85);
+      --card-bg: #4A3040;
+      --border-color: rgba(194, 142, 92, 0.25);
+      --text-main: #FCFAFA;
+      --text-soft: #BFA9B5;
+      --shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+      --nav-bg: rgba(58, 37, 51, 0.85);
+      --input-bg: rgba(194, 142, 92, 0.08);
+      --input-bg-hover: rgba(194, 142, 92, 0.15);
+      --tech-badge-bg: rgba(228, 197, 155, 0.1);
+      --tech-badge-border: rgba(228, 197, 155, 0.25);
+      --skill-icon-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      --overlay-bg: rgba(58, 37, 51, 0.9);
     }
 
     /* ============================================================
-       LIGHT MODE OVERRIDES
+       LIGHT MODE OVERRIDES — BEIGE/CREAM & BURGUNDY
        ============================================================ */
     body.light-mode {
-      --primary: #5a52e0;
-      --primary-hover: #4a42c8;
-      --secondary: #e85a7a;
-      --dark: #f8f9fc;
-      --dark2: #ffffff;
-      --light: #1e1e2f;
-      --gray: #5a5a72;
+      --primary: #8C3D4A;          /* Deep Burgundy */
+      --primary-hover: #6F2C36;    /* Darker Burgundy */
+      --secondary: #A45C68;        /* Soft Burgundy */
+      --dark: #F5EDE6;             /* Warm Cream/Beige Background */
+      --dark2: #FFFFFF;            /* Pure White (Cards) */
+      --light: #3A2533;            /* Deep Plum (Main Text) */
+      --gray: #7A6B75;             /* Muted Plum-Gray (Soft Text) */
 
-      --card-bg: #ffffff;
-      --border-color: rgba(108, 99, 255, 0.25);
-      --text-main: #1e1e2f;
-      --text-soft: #5a5a72;
-      --shadow: 0 20px 40px rgba(108, 99, 255, 0.15);
-      --nav-bg: rgba(255, 255, 255, 0.9);
-      --input-bg: rgba(108, 99, 255, 0.08);
-      --input-bg-hover: rgba(108, 99, 255, 0.15);
-      --tech-badge-bg: rgba(232, 90, 122, 0.1);
-      --tech-badge-border: rgba(232, 90, 122, 0.25);
+      --card-bg: #FFFFFF;
+      --border-color: rgba(140, 61, 74, 0.15);
+      --text-main: #3A2533;
+      --text-soft: #7A6B75;
+      --shadow: 0 20px 40px rgba(140, 61, 74, 0.08);
+      --nav-bg: rgba(245, 237, 230, 0.9);
+      --input-bg: rgba(140, 61, 74, 0.05);
+      --input-bg-hover: rgba(140, 61, 74, 0.1);
+      --tech-badge-bg: rgba(164, 92, 104, 0.1);
+      --tech-badge-border: rgba(164, 92, 104, 0.25);
       --skill-icon-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
       --overlay-bg: rgba(255, 255, 255, 0.92);
     }
@@ -90,10 +88,7 @@
       width: 100%;
       height: 100%;
       z-index: -1;
-      background:
-        radial-gradient(circle at 20% 50%, rgba(108, 99, 255, 0.15) 0%, transparent 50%),
-        radial-gradient(circle at 80% 80%, rgba(255, 101, 132, 0.15) 0%, transparent 50%),
-        var(--dark);
+      background: var(--dark);
       transition: background 0.4s ease;
     }
 
@@ -119,16 +114,13 @@
     .logo {
       font-size: 1.6rem;
       font-weight: 800;
-      background: var(--gradient);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
+      color: var(--primary);
       letter-spacing: 1px;
     }
 
     .nav-links {
       display: flex;
-      gap: 2rem;
+      gap: 1.8rem;
       list-style: none;
       align-items: center;
     }
@@ -149,7 +141,7 @@
       left: 0;
       width: 0;
       height: 2px;
-      background: var(--gradient);
+      background: var(--primary);
       transition: 0.3s;
     }
 
@@ -176,7 +168,7 @@
     }
     .theme-toggle:hover {
       background: var(--primary);
-      color: #fff;
+      color: #3A2533;
       border-color: var(--primary);
     }
 
@@ -223,10 +215,7 @@
     }
 
     .hero-text h1 span {
-      background: var(--gradient);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
+      color: var(--primary);
     }
 
     .hero-text h2 {
@@ -264,7 +253,7 @@
 
     .btn {
       padding: 0.9rem 2rem;
-      border-radius: 50px;
+      border-radius: 4px;
       font-weight: 600;
       font-size: 0.95rem;
       text-decoration: none;
@@ -278,13 +267,14 @@
     }
 
     .btn-primary {
-      background: var(--gradient);
-      color: white;
-      box-shadow: 0 10px 30px rgba(108, 99, 255, 0.4);
+      background: var(--primary);
+      color: #3A2533;
+      box-shadow: 0 10px 30px rgba(194, 142, 92, 0.2);
     }
     .btn-primary:hover {
+      background: var(--primary-hover);
       transform: translateY(-3px);
-      box-shadow: 0 15px 40px rgba(108, 99, 255, 0.6);
+      box-shadow: 0 15px 40px rgba(194, 142, 92, 0.4);
     }
 
     .btn-outline {
@@ -294,7 +284,7 @@
     }
     .btn-outline:hover {
       background: var(--primary);
-      color: white;
+      color: #3A2533;
       transform: translateY(-3px);
     }
 
@@ -319,10 +309,10 @@
       font-size: 1.1rem;
     }
     .social-icons a:hover {
-      background: var(--gradient);
-      color: white;
+      background: var(--primary);
+      color: #3A2533;
       transform: translateY(-5px);
-      box-shadow: 0 10px 25px rgba(108, 99, 255, 0.5);
+      box-shadow: 0 10px 25px rgba(194, 142, 92, 0.3);
     }
 
     .hero-image {
@@ -336,13 +326,13 @@
       width: 380px;
       height: 380px;
       border-radius: 50%;
-      background: var(--gradient);
+      background: var(--primary);
       display: flex;
       align-items: center;
       justify-content: center;
       position: relative;
       animation: float 6s ease-in-out infinite;
-      box-shadow: 0 0 80px rgba(108, 99, 255, 0.4);
+      box-shadow: 0 0 80px rgba(194, 142, 92, 0.2);
     }
 
     .avatar-container::before {
@@ -350,7 +340,7 @@
       position: absolute;
       inset: -15px;
       border-radius: 50%;
-      border: 2px dashed rgba(108, 99, 255, 0.5);
+      border: 2px dashed rgba(228, 197, 155, 0.5);
       animation: rotate 20s linear infinite;
     }
 
@@ -367,6 +357,14 @@
       color: var(--primary);
       overflow: hidden;
       transition: background 0.4s ease;
+    }
+
+    /* Profile Image CSS Added Here */
+    .avatar-inner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
     }
 
     @keyframes float {
@@ -399,16 +397,13 @@
     }
 
     .section-title h2 span {
-      background: var(--gradient);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
+      color: var(--primary);
     }
 
     .section-title .line {
       width: 80px;
       height: 4px;
-      background: var(--gradient);
+      background: var(--primary);
       margin: 0 auto;
       border-radius: 2px;
     }
@@ -439,7 +434,7 @@
       left: 0;
       width: 100%;
       height: 4px;
-      background: var(--gradient);
+      background: var(--primary);
     }
 
     .about-info-item {
@@ -496,10 +491,7 @@
     }
     .stat-box h4 {
       font-size: 1.8rem;
-      background: var(--gradient);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
+      color: var(--primary);
     }
     .stat-box p {
       font-size: 0.8rem;
@@ -567,7 +559,7 @@
     .skill-icon-item:hover .skill-icon-circle {
       transform: scale(1.08);
       border-color: var(--primary);
-      box-shadow: 0 10px 25px rgba(108, 99, 255, 0.25);
+      box-shadow: 0 10px 25px rgba(194, 142, 92, 0.2);
     }
 
     .skill-name {
@@ -581,6 +573,7 @@
       opacity: 0.8;
     }
 
+    /* Brand Colors */
     .html-icon { color: #e34f26; }
     .css-icon { color: #1572b6; }
     .js-icon { color: #f7df1e; }
@@ -598,10 +591,7 @@
     .flutter-icon { color: #02569b; }
 
     .generic-skill {
-      background: var(--gradient);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
+      color: var(--primary);
       font-size: 2.8rem;
     }
 
@@ -630,7 +620,7 @@
 
     .project-header {
       height: 160px;
-      background: var(--gradient);
+      background: var(--primary);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -641,11 +631,11 @@
       content: '';
       position: absolute;
       inset: 0;
-      background: rgba(15, 14, 23, 0.3);
+      background: rgba(58, 37, 51, 0.1);
     }
     .project-header i {
       font-size: 3.5rem;
-      color: white;
+      color: #3A2533;
       z-index: 1;
       transition: 0.4s;
     }
@@ -679,7 +669,7 @@
       border: 1px solid var(--tech-badge-border);
       border-radius: 15px;
       font-size: 0.72rem;
-      color: var(--secondary);
+      color: var(--primary);
     }
 
     /* ============================================================
@@ -784,7 +774,7 @@
       top: 0;
       width: 3px;
       height: 100%;
-      background: var(--gradient);
+      background: var(--primary);
       border-radius: 2px;
     }
 
@@ -829,9 +819,9 @@
       width: 18px;
       height: 18px;
       border-radius: 50%;
-      background: var(--gradient);
+      background: var(--primary);
       border: 3px solid var(--dark);
-      box-shadow: 0 0 15px rgba(108, 99, 255, 0.6);
+      box-shadow: 0 0 15px rgba(194, 142, 92, 0.5);
       transition: border-color 0.4s ease;
       z-index: 1;
     }
@@ -860,10 +850,7 @@
     }
     .language-card i {
       font-size: 2.5rem;
-      background: var(--gradient);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
+      color: var(--primary);
       margin-bottom: 1rem;
     }
     .language-card h3 {
@@ -880,7 +867,7 @@
        CONTACT
        ============================================================ */
     .contact-container {
-      max-width: 700px;
+      max-width: 900px;
       margin: 0 auto;
       text-align: center;
     }
@@ -910,10 +897,7 @@
     }
     .contact-card i {
       font-size: 2rem;
-      background: var(--gradient);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
+      color: var(--primary);
       margin-bottom: 1rem;
     }
     .contact-card h4 {
@@ -938,10 +922,7 @@
       font-size: 0.85rem;
     }
     footer span {
-      background: var(--gradient);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
+      color: var(--primary);
       font-weight: 600;
     }
 
@@ -952,7 +933,7 @@
       display: none;
       position: fixed;
       inset: 0;
-      background: rgba(0, 0, 0, 0.9);
+      background: rgba(58, 37, 51, 0.95);
       z-index: 2000;
       align-items: center;
       justify-content: center;
@@ -966,21 +947,21 @@
       max-width: 90%;
       max-height: 90vh;
       border-radius: 12px;
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
     }
     .lightbox-close {
       position: absolute;
       top: 25px;
       right: 35px;
       font-size: 2.2rem;
-      color: #fff;
+      color: #FCFAFA;
       cursor: pointer;
       transition: 0.3s;
       background: none;
       border: none;
     }
     .lightbox-close:hover {
-      color: var(--secondary);
+      color: var(--primary);
       transform: rotate(90deg);
     }
 
@@ -1124,6 +1105,7 @@
       <li><a href="#screenshots">Projects Demo</a></li>
       <li><a href="#education">Education</a></li>
       <li><a href="#contact">Contact</a></li>
+      <li><a href="file:///C:/Desktop/Arifa%20Latif.pdf" target="_blank" style="color: var(--primary); font-weight: 700;"><i class="fas fa-download"></i> CV</a></li>
       <li>
         <button class="theme-toggle" id="themeToggle" title="Toggle Theme" aria-label="Toggle Theme">
           <i class="fas fa-moon"></i>
@@ -1147,7 +1129,7 @@
         </p>
         <div class="hero-btns">
           <a href="#contact" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Hire Me</a>
-          <a href="#projects" class="btn btn-outline"><i class="fas fa-code"></i> View Projects</a>
+          <a href="file:///C:/Desktop/Arifa%20Latif.pdf" target="_blank" class="btn btn-outline"><i class="fas fa-download"></i> Download CV</a>
         </div>
         <div class="social-icons">
           <a href="https://www.linkedin.com/in/arifa-latif-59643b3a7" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
@@ -1158,7 +1140,10 @@
       </div>
       <div class="hero-image">
         <div class="avatar-container">
-          <div class="avatar-inner">AL</div>
+          <div class="avatar-inner">
+            <!-- Profile Picture Image Tag Added -->
+            <img src="file:///C:/Users/1122/Music/Desktop/Arifa%20Profile.png" alt="Arifa Latif Profile Picture">
+          </div>
         </div>
       </div>
     </div>
@@ -1572,13 +1557,19 @@
           <h4>Location</h4>
           <p>Lahore, Punjab, Pakistan</p>
         </a>
+        <!-- CV Option in Contact -->
+        <a href="file:///C:/Desktop/Arifa%20Latif.pdf" target="_blank" class="contact-card">
+          <i class="fas fa-file-pdf"></i>
+          <h4>Resume / CV</h4>
+          <p>View or Download PDF</p>
+        </a>
       </div>
     </div>
   </section>
 
   <!-- FOOTER -->
   <footer>
-    <p>Designed & Built with <i class="fas fa-heart" style="color: #ff6584;"></i> by <span>Arifa Latif</span></p>
+    <p>Designed & Built with <i class="fas fa-heart" style="color: var(--secondary);"></i> by <span>Arifa Latif</span></p>
     <p style="margin-top: 0.5rem; font-size: 0.8rem;">&copy; 2025 All Rights Reserved</p>
   </footer>
 
