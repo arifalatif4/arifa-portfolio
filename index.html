@@ -18,55 +18,55 @@
     }
 
     /* ============================================================
-       DARK MODE (DEFAULT) — ALL VARIABLES DEFINED
+       NEW COLOR SCHEME (Dark Maroon/Purple Theme)
        ============================================================ */
     :root {
-      --primary: #6c63ff;
-      --primary-hover: #5a52e0;
-      --secondary: #ff6584;
-      --dark: #0f0e17;
-      --dark2: #1a1a2e;
-      --light: #fffffe;
-      --gray: #a7a9be;
+      --primary: #f3a6b6;          /* Soft Pink (Google Logo color) */
+      --primary-hover: #e0889b;
+      --secondary: #f3a6b6;
+      --dark: #3f3336;             /* Exact Dark Maroon/Purple Background */
+      --dark2: #4a3c41;            /* Slightly lighter for cards */
+      --light: #ffffff;
+      --gray: #d1c8c8;
 
-      --gradient: linear-gradient(135deg, #6c63ff 0%, #ff6584 100%);
+      --gradient: linear-gradient(135deg, #f3a6b6 0%, #e0889b 100%);
 
-      --card-bg: #1a1a2e;
-      --border-color: rgba(108, 99, 255, 0.2);
-      --text-main: #fffffe;
-      --text-soft: #a7a9be;
-      --shadow: 0 20px 40px rgba(108, 99, 255, 0.2);
-      --nav-bg: rgba(15, 14, 23, 0.85);
-      --input-bg: rgba(108, 99, 255, 0.05);
-      --input-bg-hover: rgba(108, 99, 255, 0.15);
-      --tech-badge-bg: rgba(255, 101, 132, 0.12);
-      --tech-badge-border: rgba(255, 101, 132, 0.3);
-      --skill-icon-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-      --overlay-bg: rgba(15, 14, 23, 0.85);
+      --card-bg: #4a3c41;
+      --border-color: rgba(243, 166, 182, 0.2);
+      --text-main: #ffffff;
+      --text-soft: #d1c8c8;
+      --shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+      --nav-bg: rgba(63, 51, 54, 0.95);
+      --input-bg: rgba(255, 255, 255, 0.05);
+      --input-bg-hover: rgba(255, 255, 255, 0.1);
+      --tech-badge-bg: rgba(243, 166, 182, 0.15);
+      --tech-badge-border: rgba(243, 166, 182, 0.3);
+      --skill-icon-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      --overlay-bg: rgba(74, 60, 65, 0.9);
     }
 
     /* ============================================================
-       LIGHT MODE OVERRIDES
+       LIGHT MODE OVERRIDES (Optional Toggle)
        ============================================================ */
     body.light-mode {
-      --primary: #5a52e0;
-      --primary-hover: #4a42c8;
-      --secondary: #e85a7a;
-      --dark: #f8f9fc;
+      --primary: #d1798b;
+      --primary-hover: #b85e70;
+      --secondary: #d1798b;
+      --dark: #fdfafb;
       --dark2: #ffffff;
-      --light: #1e1e2f;
-      --gray: #5a5a72;
+      --light: #2a2222;
+      --gray: #6e6363;
 
       --card-bg: #ffffff;
-      --border-color: rgba(108, 99, 255, 0.25);
-      --text-main: #1e1e2f;
-      --text-soft: #5a5a72;
-      --shadow: 0 20px 40px rgba(108, 99, 255, 0.15);
-      --nav-bg: rgba(255, 255, 255, 0.9);
-      --input-bg: rgba(108, 99, 255, 0.08);
-      --input-bg-hover: rgba(108, 99, 255, 0.15);
-      --tech-badge-bg: rgba(232, 90, 122, 0.1);
-      --tech-badge-border: rgba(232, 90, 122, 0.25);
+      --border-color: rgba(209, 121, 139, 0.25);
+      --text-main: #2a2222;
+      --text-soft: #6e6363;
+      --shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+      --nav-bg: rgba(253, 250, 251, 0.95);
+      --input-bg: rgba(209, 121, 139, 0.08);
+      --input-bg-hover: rgba(209, 121, 139, 0.15);
+      --tech-badge-bg: rgba(209, 121, 139, 0.1);
+      --tech-badge-border: rgba(209, 121, 139, 0.25);
       --skill-icon-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
       --overlay-bg: rgba(255, 255, 255, 0.92);
     }
@@ -91,8 +91,8 @@
       height: 100%;
       z-index: -1;
       background:
-        radial-gradient(circle at 20% 50%, rgba(108, 99, 255, 0.15) 0%, transparent 50%),
-        radial-gradient(circle at 80% 80%, rgba(255, 101, 132, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 20% 50%, rgba(243, 166, 182, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.03) 0%, transparent 50%),
         var(--dark);
       transition: background 0.4s ease;
     }
@@ -119,16 +119,13 @@
     .logo {
       font-size: 1.6rem;
       font-weight: 800;
-      background: var(--gradient);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
+      color: var(--primary);
       letter-spacing: 1px;
     }
 
     .nav-links {
       display: flex;
-      gap: 2rem;
+      gap: 1.8rem;
       list-style: none;
       align-items: center;
     }
@@ -149,7 +146,7 @@
       left: 0;
       width: 0;
       height: 2px;
-      background: var(--gradient);
+      background: var(--primary);
       transition: 0.3s;
     }
 
@@ -159,6 +156,26 @@
     .nav-links a:hover::after {
       width: 100%;
     }
+
+    /* Header CV Button */
+    .nav-cv-btn {
+      background: var(--input-bg);
+      color: var(--text-main) !important;
+      padding: 0.4rem 1.2rem;
+      border-radius: 20px;
+      border: 1px solid var(--border-color);
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.85rem !important;
+      transition: 0.3s;
+    }
+    .nav-cv-btn:hover {
+      background: var(--primary);
+      color: var(--dark) !important;
+      border-color: var(--primary);
+    }
+    .nav-cv-btn::after { display: none !important; }
 
     .theme-toggle {
       background: var(--input-bg);
@@ -176,7 +193,7 @@
     }
     .theme-toggle:hover {
       background: var(--primary);
-      color: #fff;
+      color: var(--dark);
       border-color: var(--primary);
     }
 
@@ -223,10 +240,7 @@
     }
 
     .hero-text h1 span {
-      background: var(--gradient);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
+      color: var(--primary);
     }
 
     .hero-text h2 {
@@ -238,9 +252,9 @@
     }
 
     .typed-text {
-      color: var(--secondary);
+      color: var(--primary);
       font-weight: 600;
-      border-right: 3px solid var(--secondary);
+      border-right: 3px solid var(--primary);
       padding-right: 5px;
       animation: blink 0.8s infinite;
     }
@@ -278,13 +292,14 @@
     }
 
     .btn-primary {
-      background: var(--gradient);
-      color: white;
-      box-shadow: 0 10px 30px rgba(108, 99, 255, 0.4);
+      background: var(--primary);
+      color: var(--dark);
+      box-shadow: 0 10px 30px rgba(243, 166, 182, 0.2);
     }
     .btn-primary:hover {
+      background: var(--primary-hover);
       transform: translateY(-3px);
-      box-shadow: 0 15px 40px rgba(108, 99, 255, 0.6);
+      box-shadow: 0 15px 40px rgba(243, 166, 182, 0.3);
     }
 
     .btn-outline {
@@ -294,7 +309,7 @@
     }
     .btn-outline:hover {
       background: var(--primary);
-      color: white;
+      color: var(--dark);
       transform: translateY(-3px);
     }
 
@@ -319,10 +334,10 @@
       font-size: 1.1rem;
     }
     .social-icons a:hover {
-      background: var(--gradient);
-      color: white;
+      background: var(--primary);
+      color: var(--dark);
       transform: translateY(-5px);
-      box-shadow: 0 10px 25px rgba(108, 99, 255, 0.5);
+      box-shadow: 0 10px 25px rgba(243, 166, 182, 0.3);
     }
 
     .hero-image {
@@ -336,13 +351,13 @@
       width: 380px;
       height: 380px;
       border-radius: 50%;
-      background: var(--gradient);
+      background: var(--primary);
       display: flex;
       align-items: center;
       justify-content: center;
       position: relative;
       animation: float 6s ease-in-out infinite;
-      box-shadow: 0 0 80px rgba(108, 99, 255, 0.4);
+      box-shadow: 0 0 80px rgba(243, 166, 182, 0.2);
     }
 
     .avatar-container::before {
@@ -350,7 +365,7 @@
       position: absolute;
       inset: -15px;
       border-radius: 50%;
-      border: 2px dashed rgba(108, 99, 255, 0.5);
+      border: 2px dashed rgba(243, 166, 182, 0.4);
       animation: rotate 20s linear infinite;
     }
 
@@ -406,16 +421,13 @@
     }
 
     .section-title h2 span {
-      background: var(--gradient);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
+      color: var(--primary);
     }
 
     .section-title .line {
       width: 80px;
       height: 4px;
-      background: var(--gradient);
+      background: var(--primary);
       margin: 0 auto;
       border-radius: 2px;
     }
@@ -446,7 +458,7 @@
       left: 0;
       width: 100%;
       height: 4px;
-      background: var(--gradient);
+      background: var(--primary);
     }
 
     .about-info-item {
@@ -503,10 +515,7 @@
     }
     .stat-box h4 {
       font-size: 1.8rem;
-      background: var(--gradient);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
+      color: var(--primary);
     }
     .stat-box p {
       font-size: 0.8rem;
@@ -574,7 +583,7 @@
     .skill-icon-item:hover .skill-icon-circle {
       transform: scale(1.08);
       border-color: var(--primary);
-      box-shadow: 0 10px 25px rgba(108, 99, 255, 0.25);
+      box-shadow: 0 10px 25px rgba(243, 166, 182, 0.2);
     }
 
     .skill-name {
@@ -605,10 +614,7 @@
     .flutter-icon { color: #02569b; }
 
     .generic-skill {
-      background: var(--gradient);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
+      color: var(--primary);
       font-size: 2.8rem;
     }
 
@@ -637,7 +643,7 @@
 
     .project-header {
       height: 160px;
-      background: var(--gradient);
+      background: var(--primary);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -648,11 +654,11 @@
       content: '';
       position: absolute;
       inset: 0;
-      background: rgba(15, 14, 23, 0.3);
+      background: rgba(63, 51, 54, 0.3);
     }
     .project-header i {
       font-size: 3.5rem;
-      color: white;
+      color: var(--dark);
       z-index: 1;
       transition: 0.4s;
     }
@@ -686,7 +692,7 @@
       border: 1px solid var(--tech-badge-border);
       border-radius: 15px;
       font-size: 0.72rem;
-      color: var(--secondary);
+      color: var(--primary);
     }
 
     /* ============================================================
@@ -776,7 +782,7 @@
     }
 
     /* ============================================================
-       EDUCATION TIMELINE (SINGLE SIDE - LEFT)
+       EDUCATION TIMELINE
        ============================================================ */
     .timeline {
       position: relative;
@@ -791,7 +797,7 @@
       top: 0;
       width: 3px;
       height: 100%;
-      background: var(--gradient);
+      background: var(--primary);
       border-radius: 2px;
     }
 
@@ -836,9 +842,9 @@
       width: 18px;
       height: 18px;
       border-radius: 50%;
-      background: var(--gradient);
+      background: var(--primary);
       border: 3px solid var(--dark);
-      box-shadow: 0 0 15px rgba(108, 99, 255, 0.6);
+      box-shadow: 0 0 15px rgba(243, 166, 182, 0.4);
       transition: border-color 0.4s ease;
       z-index: 1;
     }
@@ -867,10 +873,7 @@
     }
     .language-card i {
       font-size: 2.5rem;
-      background: var(--gradient);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
+      color: var(--primary);
       margin-bottom: 1rem;
     }
     .language-card h3 {
@@ -917,10 +920,7 @@
     }
     .contact-card i {
       font-size: 2rem;
-      background: var(--gradient);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
+      color: var(--primary);
       margin-bottom: 1rem;
     }
     .contact-card h4 {
@@ -945,10 +945,7 @@
       font-size: 0.85rem;
     }
     footer span {
-      background: var(--gradient);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
+      color: var(--primary);
       font-weight: 600;
     }
 
@@ -987,7 +984,7 @@
       border: none;
     }
     .lightbox-close:hover {
-      color: var(--secondary);
+      color: var(--primary);
       transform: rotate(90deg);
     }
 
@@ -1131,6 +1128,12 @@
       <li><a href="#screenshots">Projects Demo</a></li>
       <li><a href="#education">Education</a></li>
       <li><a href="#contact">Contact</a></li>
+      <!-- HEADER CV BUTTON -->
+      <li>
+        <a href="Arifa%20Latif.pdf" download class="nav-cv-btn">
+          <i class="fas fa-download"></i> Download CV
+        </a>
+      </li>
       <li>
         <button class="theme-toggle" id="themeToggle" title="Toggle Theme" aria-label="Toggle Theme">
           <i class="fas fa-moon"></i>
@@ -1154,7 +1157,6 @@
         </p>
         <div class="hero-btns">
           <a href="#contact" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Hire Me</a>
-          <a href="https://github.com/arifalatif4/arifa-portfolio/raw/main/Arifa%20Latif.pdf" target="_blank" class="btn btn-outline"><i class="fas fa-file-pdf"></i> View CV</a>
           <a href="#projects" class="btn btn-outline"><i class="fas fa-code"></i> View Projects</a>
         </div>
         <div class="social-icons">
@@ -1167,7 +1169,8 @@
       <div class="hero-image">
         <div class="avatar-container">
           <div class="avatar-inner">
-            <img src="https://raw.githubusercontent.com/arifalatif4/arifa-portfolio/main/Arifa%20Profile.png" alt="Arifa Latif Profile">
+            <!-- GitHub profile path -->
+            <img src="Arifa%20Profile.png" alt="Arifa Latif Profile">
           </div>
         </div>
       </div>
@@ -1442,7 +1445,7 @@
     </div>
   </section>
 
-  <!-- PROJECT SCREENSHOTS -->
+  <!-- PROJECT SCREENSHOTS (PATHS FIXED FOR GITHUB) -->
   <section id="screenshots">
     <div class="section-title reveal">
       <h2>Projects <span>Demo</span></h2>
@@ -1451,9 +1454,9 @@
 
     <div class="screenshots-grid">
 
-      <div class="screenshot-card reveal" onclick="openLightbox('file:///C:/Users/1122/Downloads/portfolio%20images/MIND2DECK.png')">
+      <div class="screenshot-card reveal" onclick="openLightbox('MIND2DECK.png')">
         <div class="screenshot-image">
-          <img src="file:///C:/Users/1122/Downloads/portfolio%20images/MIND2DECK.png" alt="Mind2Deck project homepage">
+          <img src="MIND2DECK.png" alt="Mind2Deck project homepage">
           <div class="screenshot-overlay">
             <i class="fas fa-search-plus"></i>
             <span>Click to view</span>
@@ -1465,9 +1468,9 @@
         </div>
       </div>
 
-      <div class="screenshot-card reveal" onclick="openLightbox('file:///C:/Users/1122/Downloads/portfolio%20images/Shopping%20Store.png')">
+      <div class="screenshot-card reveal" onclick="openLightbox('Shopping Store.png')">
         <div class="screenshot-image">
-          <img src="file:///C:/Users/1122/Downloads/portfolio%20images/Shopping%20Store.png" alt="Rifa's Place online shopping store">
+          <img src="Shopping Store.png" alt="Rifa's Place online shopping store">
           <div class="screenshot-overlay">
             <i class="fas fa-search-plus"></i>
             <span>Click to view</span>
@@ -1479,9 +1482,9 @@
         </div>
       </div>
 
-      <div class="screenshot-card reveal" onclick="openLightbox('file:///C:/Users/1122/Downloads/portfolio%20images/BuzzWave%20Social%20Dashboard.png')">
+      <div class="screenshot-card reveal" onclick="openLightbox('BuzzWave Social Dashboard.png')">
         <div class="screenshot-image">
-          <img src="file:///C:/Users/1122/Downloads/portfolio%20images/BuzzWave%20Social%20Dashboard.png" alt="BuzzWave social dashboard">
+          <img src="BuzzWave Social Dashboard.png" alt="BuzzWave social dashboard">
           <div class="screenshot-overlay">
             <i class="fas fa-search-plus"></i>
             <span>Click to view</span>
@@ -1558,6 +1561,7 @@
     </div>
     <div class="contact-container reveal">
       <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision</p>
+      
       <div class="contact-cards">
         <a href="mailto:arifalatif18@gmail.com" class="contact-card">
           <i class="fas fa-envelope"></i>
@@ -1574,10 +1578,11 @@
           <h4>LinkedIn</h4>
           <p>arifa-latif-59643b3a7</p>
         </a>
-        <a href="#" class="contact-card">
-          <i class="fas fa-map-marker-alt"></i>
-          <h4>Location</h4>
-          <p>Lahore, Punjab, Pakistan</p>
+        <!-- GET IN TOUCH CV BUTTON -->
+        <a href="Arifa%20Latif.pdf" download class="contact-card">
+          <i class="fas fa-download"></i>
+          <h4>Download CV</h4>
+          <p>Click to download PDF</p>
         </a>
       </div>
     </div>
@@ -1585,7 +1590,7 @@
 
   <!-- FOOTER -->
   <footer>
-    <p>Designed & Built with <i class="fas fa-heart" style="color: #ff6584;"></i> by <span>Arifa Latif</span></p>
+    <p>Designed & Built with <i class="fas fa-heart" style="color: var(--primary);"></i> by <span>Arifa Latif</span></p>
     <p style="margin-top: 0.5rem; font-size: 0.8rem;">&copy; 2025 All Rights Reserved</p>
   </footer>
 
